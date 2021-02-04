@@ -10,6 +10,14 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$("friends.class").click(friendClick);
+}
+
+function friendClick(e) {
+	console.log("friend click is connected!");
+	e.preventDefault();
+	var name = $(this).text()
+	$("friends.class").click(anagrammedName)
 }
 
 function anagrammedName(name) {
